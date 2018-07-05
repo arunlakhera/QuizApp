@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="mar_default">1dp</dimen>
+    <dimen name="mar_med">5dp</dimen>
+
+    <dimen name="mar_top_small">8dp</dimen>
+    <dimen name="mar_top_med">16dp</dimen>
+    <dimen name="mar_top_lar">24dp</dimen>
+    <dimen name="mar_top_xlar">50dp</dimen>
+    <dimen name="mar_top_xxlar">100dp</dimen>
+
+    <dimen name="mar_bottom_small">8dp</dimen>
+    <dimen name="mar_bottom_med">16dp</dimen>
+    <dimen name="mar_bottom_lar">24dp</dimen>
+    <dimen name="mar_bottom_xlar">50dp</dimen>
+
+    <dimen name="mar_left_small">8dp</dimen>
+    <dimen name="mar_left_med">16dp</dimen>
+    <dimen name="mar_left_lar">24dp</dimen>
+
+    <dimen name="mar_right_small">8dp</dimen>
+    <dimen name="mar_right_med">16dp</dimen>
+    <dimen name="mar_right_lar">24dp</dimen>
+
+    <dimen name="btn_height_small">40dp</dimen>
+    <dimen name="btn_height_med">48dp</dimen>
+    <dimen name="btn_height_lar">60dp</dimen>
+
+    <dimen name="btn_width_small">40dp</dimen>
+    <dimen name="btn_width_med">48dp</dimen>
+    <dimen name="btn_width_lar">60dp</dimen>
+
+    <dimen name="title_height_small">40dp</dimen>
+    <dimen name="title_height_med">50dp</dimen>
+    <dimen name="title_height_lar">55dp</dimen>
+
+    <dimen name="text_font_small">16sp</dimen>
+    <dimen name="text_font_med">20sp</dimen>
+    <dimen name="text_font_lar">24sp</dimen>
+    <dimen name="title_font_lar">30sp</dimen>
+
+    <dimen name="cardView_radius">4dp</dimen>
+    <dimen name="cardView_elevation">5dp</dimen>
+
+    <dimen name="padding_default">3dp</dimen>
+    <dimen name="txtvw_question_height">150dp</dimen>
+    <dimen name="txtvw_score_height">300dp</dimen>
+
+</resources>

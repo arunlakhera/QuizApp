@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">SqueezeQuiz</string>
+    <string name="btn_start">Start</string>
+    <string name="txt_name_hint">Your Name</string>
+    <string name="txtvw_ques_num">1/10</string>
+    <string name="txtvw_title">Question</string>
+    <string name="txtvw_result_title">Score Summary</string>
+    <string name="txtvw_score_default">0</string>
+    <string name="txtvw_ans1">Answer 1</string>
+    <string name="txtvw_ans2">Answer 2</string>
+    <string name="txtvw_ans3">Answer 3</string>
+    <string name="txtvw_ans4">Answer 4</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_next_level">NEXT LEVEL</string>
+    <string name="btn_try_again">Try Again!!</string>
+    <string name="txt_font">sans-serif-smallcaps</string>
+    <string name="txtvw_total_ques">Total Questions</string>
+    <string name="txtvw_correct">Correct</string>
+    <string name="txtvw_wrong">Wrong</string>
+    <string name="txtvw_not_answered">Not Answered</string>
+    <string name="txtvw_score">Score</string>
+</resources>

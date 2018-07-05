@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDarkNight"
+    tools:context=".QuizActivity">
+
+    <!-- CardView containing Question Number/Title/Score -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview_Score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/mar_right_small"
+        android:layout_marginLeft="@dimen/mar_left_small"
+        android:layout_marginRight="@dimen/mar_right_small"
+        android:layout_marginStart="@dimen/mar_left_small"
+        android:layout_marginTop="@dimen/mar_top_small"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="@dimen/cardView_radius"
+        app:cardElevation="@dimen/cardView_elevation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height_med"
+            android:layout_margin="@dimen/mar_left_small"
+            android:orientation="horizontal">
+
+            <!-- TextView to show Question Number -->
+            <TextView
+                android:id="@+id/textView_Question_Number"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/txtvw_ques_num"
+                android:textColor="@color/colorFontWhite"
+                android:textSize="@dimen/text_font_small"
+                android:textStyle="bold" />
+
+            <!-- TextView to show Title -->
+            <ImageView
+                android:id="@+id/imageView_QuizMode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/mar_default"
+                android:layout_weight="1.5"
+                android:src="@drawable/basic" />
+
+            <!-- TextView to Show Score -->
+            <TextView
+                android:id="@+id/textView_Points"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/mar_default"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/txtvw_score_default"
+                android:textColor="@color/colorFontWhite"
+                android:textSize="@dimen/text_font_small"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/btn_height_lar"
+        android:layout_marginTop="@dimen/btn_height_lar"
+        android:background="@color/colorDarkNight"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- CardView for Question -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardview_Question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="@dimen/mar_bottom_small"
+                android:layout_marginEnd="@dimen/mar_right_small"
+                android:layout_marginLeft="@dimen/mar_left_small"
+                android:layout_marginRight="@dimen/mar_right_small"
+                android:layout_marginStart="@dimen/mar_left_small"
+                android:layout_marginTop="@dimen/mar_top_med"
+                app:cardBackgroundColor="@color/colorDarkNight"
+                app:cardCornerRadius="@dimen/cardView_radius"
+                app:cardElevation="@dimen/cardView_elevation">
+
+                <!-- TextView to show Question -->
+                <TextView
+                    android:id="@+id/textView_Question"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/txtvw_question_height"
+                    android:layout_marginBottom="@dimen/mar_bottom_small"
+                    android:layout_marginEnd="@dimen/mar_right_small"
+                    android:layout_marginLeft="@dimen/mar_left_small"
+                    android:layout_marginRight="@dimen/mar_right_small"
+                    android:layout_marginStart="@dimen/mar_left_small"
+                    android:layout_marginTop="@dimen/mar_top_med"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorFontWhite"
+                    android:textSize="@dimen/text_font_med"
+                    app:fontFamily="serif-monospace" />
+            </android.support.v7.widget.CardView>
+
+            <!-- CardView for Answer options CheckBox/RadioButton/UserInput Only 1 visible at a time -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView_CB_Answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardview_Question"
+                android:layout_marginBottom="@dimen/mar_bottom_small"
+                android:layout_marginEnd="@dimen/mar_right_small"
+                android:layout_marginLeft="@dimen/mar_left_small"
+                android:layout_marginRight="@dimen/mar_right_small"
+                android:layout_marginStart="@dimen/mar_left_small"
+                android:layout_marginTop="@dimen/mar_top_small"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/colorDarkNight"
+                app:cardCornerRadius="@dimen/cardView_radius"
+                app:cardElevation="@dimen/cardView_elevation">
+
+                <!-- CheckBox Answer Options -->
+                <LinearLayout
+                    android:id="@+id/layout_CB_Answers"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/mar_default"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Answer1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/mar_default"
+                        android:onClick="onCheckBoxClicked"
+                        android:text="@string/txtvw_ans1"
+                        android:textColor="@color/colorFontWhite"
+                        android:textSize="@dimen/text_font_small" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Answer2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/mar_default"
+                        android:onClick="onCheckBoxClicked"
+                        android:text="@string/txtvw_ans2"
+                        android:textColor="@color/colorFontWhite"
+                        android:textSize="@dimen/text_font_small" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Answer3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/mar_default"
+                        android:onClick="onCheckBoxClicked"
+                        android:text="@string/txtvw_ans3"
+                        android:textColor="@color/colorFontWhite"
+                        android:textSize="@dimen/text_font_small" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_Answer4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/mar_default"
+                        android:onClick="onCheckBoxClicked"
+                        android:text="@string/txtvw_ans4"
+                        android:textColor="@color/colorFontWhite"
+                        android:textSize="@dimen/text_font_small" />
+                </LinearLayout>
+
+                <!-- Layout for RadioButton Answers -->
+                <LinearLayout
+                    android:id="@+id/layout_RB_Answers"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/mar_default"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_Answers"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/mar_default"
+                        android:gravity="center">
+
+                        <RadioButton
+                            android:id="@+id/radioButton_Answer1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/mar_default"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="@string/txtvw_ans1"
+                            android:textColor="@color/colorFontWhite"
+                            android:textSize="@dimen/text_font_small" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton_Answer2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/mar_default"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="@string/txtvw_ans2"
+                            android:textColor="@color/colorFontWhite"
+                            android:textSize="@dimen/text_font_small" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton_Answer3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/mar_default"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="@string/txtvw_ans3"
+                            android:textColor="@color/colorFontWhite"
+                            android:textSize="@dimen/text_font_small" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton_Answer4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/mar_default"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="@string/txtvw_ans4"
+                            android:textColor="@color/colorFontWhite"
+                            android:textSize="@dimen/text_font_small" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- Layout for User Input Answers-->
+                <LinearLayout
+                    android:id="@+id/layout_UI_Answers"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/mar_default"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <EditText
+                        android:id="@+id/editText_Answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/txtvw_question_height"
+                        android:layout_margin="@dimen/mar_default"
+                        android:inputType="textCapCharacters"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorFontWhite"
+                        android:textSize="@dimen/text_font_lar" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- Layout containing Navigation Buttons Prev/Next/Submit -->
+    <LinearLayout
+        android:id="@+id/layout_Button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height_med"
+        android:layout_marginBottom="@dimen/mar_bottom_small"
+        android:layout_marginEnd="@dimen/mar_right_small"
+        android:layout_marginLeft="@dimen/mar_left_small"
+        android:layout_marginRight="@dimen/mar_right_small"
+        android:layout_marginStart="@dimen/mar_left_small"
+        android:background="@color/colorDarkNight"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/button_Prev"
+            android:layout_width="@dimen/btn_width_med"
+            android:layout_height="@dimen/btn_height_med"
+            android:background="@drawable/backbutton_red" />
+
+        <!-- Submit Button: Visible only when in last question -->
+        <Button
+            android:id="@+id/button_Submit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height_med"
+            android:layout_weight="1"
+            android:background="@drawable/button_red"
+            android:text="@string/btn_submit"
+            android:textColor="@color/colorFontWhite"
+            android:textSize="@dimen/text_font_lar"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:fontFamily="serif-monospace" />
+
+        <Button
+            android:id="@+id/button_Next"
+            android:layout_width="@dimen/btn_width_med"
+            android:layout_height="@dimen/btn_height_med"
+            android:background="@drawable/nextbutton_red" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
